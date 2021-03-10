@@ -11581,6 +11581,7 @@ const minimalWerfVersion = 'v1.1.17';
 function PrepareEnvironAndRunWerfCommand(args) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
+            core.warning("DEPRECATION WARNING: The use of the master branch as the action version is deprecated and not supported anymore. Select the version corresponding to the MAJOR.MINOR version of werf. E.g. 'uses: werf/actions/converge@v1.1' to run converge with actual werf version for 1.1 alpha channel or 'uses: werf/actions/converge@v1.2' to run converge with actual werf version for 1.2 alpha channel.");
             ProcessGitHubContext();
             const kubeConfigBase64Data = core.getInput('kube-config-base64-data');
             if (kubeConfigBase64Data !== '') {
